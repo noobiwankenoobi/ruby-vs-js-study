@@ -179,7 +179,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const filteredNumbers = numbers.filter(number => number % 3 === 0)
 
 // used:
-// MDN filter documentation. 
+// MDN filter documentation.
 
 ```
 
@@ -202,5 +202,12 @@ Write some Ruby code that uses the Array `map` method and code blocks to
 duplicate this functionality.
 
 ```ruby
-# your answer here
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+squares = numbers.map { |number| number ** 2 }
+
+# used:
+# .map ruby documentation MDN
+
 ```
