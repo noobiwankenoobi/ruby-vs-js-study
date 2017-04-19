@@ -17,7 +17,16 @@ material. Instead, digest what you've read and repeat it in your own voice.
 Describe three examples of differences between Ruby and JavaScript.
 
 ```md
-<!-- your answer here -->
+
+-Javascript is a front end language, Ruby is a back end language
+(not a 100% clean distinction because of node.js)
+-You don't need to use "var" in Ruby, you can just define a variable by assigning it
+-Many functions/methods in Ruby have implicit returns, so you don't need to type "return" or console/log
+-You use "do" in Ruby instead of curly brackets when you're telling the function what to do
+-The syntax for functions is different in general. Don't have to type "function", for one
+
+<!-- used:
+(http://agentcooper.io/js-ruby-comparison/) -->
 ```
 
 ## Ruby vs. JavaScript: Type Conversion
@@ -39,7 +48,15 @@ sum = left_operand.to_i + right_operand.to_i
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+
+const leftOperand = '1';
+const rightOperand = '2';
+
+const sum = (parseInt(leftOperand) + parseInt(rightOperand));
+
+// used:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
+
 ```
 
 ## Ruby vs. JavaScript: String Interpolation
@@ -58,7 +75,13 @@ console.log(`Many people drink ${beverage}.`)
 Write some Ruby code to duplicate this functionality.
 
 ```ruby
-# your answer here
+
+beverage = "tea"
+puts "Many people drink #{beverage}"
+end
+
+# used:
+# ruby-array training module
 ```
 
 ## Ruby vs. JavaScript: Array and String Methods
@@ -77,7 +100,14 @@ look up Ruby's array and string methods, then check the
     so that your result is `"c-o-f-f-e-e"`.
 
 ```ruby
-# your answer here
+
+str = 'eeffoc'
+str.reverse!
+str = str.split('')
+str = str.join('-')
+
+# used:
+# https://ruby-doc.org/core-2.2.0/String.html
 ```
 
 ## Ruby vs. JavaScript: Classes and Instantiation
@@ -108,7 +138,21 @@ boomhauer.hello
 Write some JavaScript code that duplicates this functionality.
 
 ```javascript
-// your answer here
+
+const Person = function(name) {
+  let helloName = name
+}
+
+Person.prototype.hello = function() {
+  console.log(`Hello, my name is ${helloName}.`)
+}
+
+const boomhauer = new Person('Jeff Boomhauer')
+
+boomhauer.hello()
+
+// used:
+// prototype documentation on MDN
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part I
@@ -129,7 +173,14 @@ Write some JavaScript code that uses the array `filter()` method to duplicate
 this functionality.
 
 ```javascript
-// your answer here
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const filteredNumbers = numbers.filter(number => number % 3 === 0)
+
+// used:
+// MDN filter documentation. 
+
 ```
 
 ## Ruby vs. JavaScript: Blocks and Callbacks, Part II
